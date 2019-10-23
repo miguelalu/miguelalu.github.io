@@ -1,0 +1,167 @@
+@import 'reset.css';
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background: #ccc;
+  widows: 100%;
+  padding: 1rem 1.25rem;
+  font-family: 'Raleway', sans-serif;
+}
+#container1{
+  background-color: #1e2040;
+  color: #fff;
+  border-right: 5px solid white;
+}
+#container2 {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 2fr 2fr 2fr;
+  background: #1e2040;
+  widows: 100%;
+  padding: 1rem 1.25rem;
+}
+.container2__title {
+  background-color: rgb(126, 7, 7);
+  text-align: end;
+}
+h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.home__perfil {
+  height: 3rem;
+  background-image: linear-gradient(-45deg, #ccc 1%, rgb(126, 7, 7) 99%);
+}
+.tecnologia__1 {
+  height: 3rem;
+  background-image: linear-gradient(-45deg, #ccc 1%, rgb(126, 7, 7) 99%);
+}
+.contacto__1 {
+  height: 3rem;
+  background-image: linear-gradient(-45deg, #ccc 1%, rgb(126, 7, 7) 99%);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  border-top: 5px solid white;
+  height: 72px;
+  overflow: hidden;
+  transition: heigh .5s ease;
+  position: relative;
+}
+.header.header--desplegado {
+  height: 100px;
+}
+.header__title,
+.header__subtitle {
+  margin: 0 0 .5rem;
+  color: #fff;
+
+}
+.header__menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header__menu a {
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.menu__btn {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: 1px solid black;
+  padding: .5rem;
+}
+.menu__btn div {
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+}
+.header__menu {
+  opacity: 0;
+  transition: opacity .5s ease .5s;
+}
+.header__menu.header__menu--opacity {
+  opacity: 1;
+}
+.header__menu a:hover {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: font-size .5s ease;
+}
+div {
+  padding: 1rem 1.25rem;
+}
+figure {
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 100%;
+  border: 10px solid rgb(126, 7, 7);
+  overflow: hidden;
+  max-width: 250px;
+}
+figure figcaption {
+  text-align: center;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 120%;  
+  transition: opacity 1s .2s ease, top .5s ease;
+}
+/* figure:hover figcaption {
+  opacity: 1;
+  top: calc(50% - 40px);
+} */
+figure img {
+  width: 100%;
+}
+#tecnologia {
+  background-color: #1e2040;
+  min-height: 50vh;
+}
+#contacto {
+  background-color: #1e2040;
+  min-height: 50vh;
+}
+.list-icons {
+  display: flex;
+  list-style-type: disc;
+  list-style: none;
+}
+li {
+  width: auto;
+}
+img {
+  width: 80px;
+
+}
+footer {
+  height: 15vh;
+  background-color:rgb(126, 7, 7);
+  width: 100%;
+}
+
+@media (max-width:600px) {
+  #container {
+    display: block;
+    grid-template-columns: 0;
+
+  }
+}
